@@ -1,0 +1,1271 @@
+body {
+    margin: 0%;
+    /* box-sizing: border-box; */
+    font-family: poppins;
+    background-color: #330708d4;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#to-top{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+   
+    background-color: #FFA305;
+    border-radius: 1rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 99999;
+    border: 1px solid white;
+}
+#to-top a{
+    color: white;
+}
+
+/* #to-top.active{
+
+} */
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 5rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    backdrop-filter: blur(1rem);
+    justify-content: space-between;
+    list-style: none;
+    position: fixed;
+    z-index: 99;
+    align-items: center;
+    /* transition: all 1s linear; */
+
+}
+
+.logo {
+    height: 10rem;
+    width: 10rem;
+    aspect-ratio: 1/1;
+}
+
+.navbar ul {
+    /* margin-right: 3rem; */
+    list-style: none;
+    /* backdrop-filter:blur(5rem); */
+
+}
+
+.navbar ul li {
+    font-size: 1.5rem;
+    float: left;
+}
+
+.navbar ul li a {
+
+    padding: .8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+
+}
+
+.navbar ul li a:hover {
+    color: rgb(255, 163, 5);
+
+}
+
+.navbar .buttons {
+    /* border: 2px solid green; */
+    font-size: 2rem;
+    display: flex;
+    margin-right: 2rem;
+    /* display: none; */
+}
+
+#closeNav {
+    color: rgb(255, 163, 5);
+    display: none;
+    cursor: pointer;
+}
+
+#openNav {
+    color: rgb(255, 163, 5);
+    display: none;
+    cursor: pointer;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+.bgi {
+    height: 100vh;
+    width: 100vw;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.page1 {
+    height: calc(100% - 5rem);
+    width: 100%;
+    /* border: 5px solid red; */
+    position: absolute;
+    text-transform: uppercase;
+    top: 1rem;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page1 h1 {
+    color: rgb(246, 246, 246);
+    font-size: 6rem;
+}
+
+.page1 h1 strong {
+    color: rgb(255, 163, 5);
+    font-size: 8rem;
+    font-weight: 1000;
+}
+
+.para {
+    width: 70%;
+    text-align: center;
+    /* border: 2px solid red; */
+    position: relative;
+    bottom: 5rem;
+}
+
+.page1 p {
+    font-size: 1.5rem;
+}
+
+.para a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: rgb(255, 163, 5);
+    border-radius: 2rem;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    position: relative;
+    top: 2rem;
+}
+
+.para a:hover {
+    transition-duration: .8s;
+    background-color: rgb(55, 56, 57);
+    color: whitesmoke;
+
+}
+
+
+/* second page styles starts from here */
+
+#secondpg {
+    width: 100%;
+    height: 100vh;
+    /* background-color:black; */
+    color: white;
+    
+
+}
+
+.wwd {
+    border: 1px solid transparent;
+    width: 100%;
+    text-align: center;
+    height: 10rem;
+}
+
+.wwd span {
+    font-size: 5rem;
+    color: rgb(255, 163, 5);
+    /* border: 2px solid green; */
+    position: relative;
+    /* bottom: 8rem; */
+    font-weight: 800;
+}
+
+.wrapper {
+    /* border: 5px solid red; */
+
+    width: 100%;
+    height: calc(100% - 10rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+
+.box1 {
+    border: 2px solid rgb(255, 255, 255);
+    height: 450px;
+    width: 350px;
+    background-color: white;
+    margin: auto;
+    box-shadow: 1rem 1rem 2rem black;
+    /* background-color:rgb(255, 163, 5) ; */
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+}
+
+.box1:hover .card {
+    transform: rotateY(180deg);
+    cursor: pointer;
+    /* background-color: white; */
+}
+
+.card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.box1 .front img {
+    height: 80%;
+    width: 100%;
+    opacity: 1;
+    aspect-ratio: 1/1;
+    transition: all .3s linear;
+}
+
+
+.text1 {
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+}
+
+.text1 p {
+    margin-top: 30px;
+    color: rgb(255, 163, 5);
+    font-weight: 600;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    color: black;
+}
+
+.content h3 {
+    font-size: 2rem;
+    padding-left: 1rem;
+    color: rgb(255, 163, 5);
+}
+
+.content p {
+    position: absolute;
+    font-size: 19px;
+    padding: 20px;
+    /* border: 2px solid red ; */
+    margin-top: -2rem;
+    padding-top: 0px;
+}
+
+
+/* third page styles start from here */
+
+#thirdpg {
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+
+body hr {
+    border: 0;
+    height: .4rem;
+    background: rgb(255, 163, 5);
+    margin: 1rem 4vw;
+    border-radius: 1rem;
+}
+
+#thirdpg .expertise {
+    color: rgb(255, 163, 5);
+    /* border: 2px solid red; */
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 800;
+
+}
+
+.elem {
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    /* background-color: red; */
+    border-bottom: .1rem solid rgba(255, 254, 254, 0.626);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.elem span {
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 0rem 5vw;
+    z-index: 92;
+    color: white;
+}
+
+.elem .overlay {
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(255, 163, 5);
+    position: absolute;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+    cursor: pointer;
+}
+
+#fixed-image {
+    height: 30rem;
+    width: 25rem;
+    /* background-color: blue; */
+    /* z-index: 99; */
+    border-radius: 2rem;
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    z-index: 90;
+    background-position: center;
+    background-size: cover;
+    display: none;
+
+}
+
+.thirdpagehr {
+    position: relative;
+    top: 11rem;
+}
+
+#fourthpg {
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(240, 192, 192); */
+    top: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fourthpagecontent {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgb(255, 163, 5);
+    text-transform: uppercase;
+}
+
+.fourthpageimg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    /* border: 2px solid red; */
+    padding: 0rem 10vw;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.fourthpageimg img {
+    width: 15rem;
+    height: 15rem;
+   }
+
+   .fourthpagehr{
+    z-index: 1;
+    position: relative;
+    top: 13rem;
+   }
+
+
+   /* fifth page starts from here  */
+
+
+   #fifthpg{
+    /* border: 5px solid red; */
+    position: relative;
+    top: 13rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+   }
+   #fifthpg .form{
+    width: 30rem;
+    height: 27rem;
+    border: 2px solid rgb(255, 163, 5);
+    padding: 2rem 5rem;
+    margin: 5rem 5rem;
+    box-shadow: .2rem .2rem 1rem rgb(255, 163, 5);
+   }
+   #fifthpg .form span{
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgb(255, 163, 5);
+    text-transform: uppercase;
+   }
+   #fifthpg .form input{
+    width:30rem;
+    height: 3rem;
+   margin-top: 1rem;
+    outline: none;
+    font-size: 2rem;
+    padding: 0rem 2rem;
+    border-radius: 2rem;
+    border: 2px solid rgb(255, 255, 255);
+  /* background: transparent; */
+  transition: .1s ;
+  z-index: 100;
+   }
+   #fifthpg .form input:focus{
+    border:.1rem solid rgb(255, 163, 5) ;
+   }
+   #fifthpg .form textarea:focus{
+    border:.1rem solid rgb(255, 163, 5) ;
+   }
+ 
+   #fifthpg .form textarea{
+    width: 100%;
+    height: 5rem;
+    margin-top:1rem ;
+    border-radius:2rem ;
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+    outline: none;
+   }
+   #fifthpg .form button{
+    width: 8rem;
+    height: 2.5rem;
+    margin:1rem 1rem;
+    border-radius:2rem ;
+    font-size: 1.2rem;
+    outline: none;
+    border: transparent;
+    cursor: pointer;
+   }
+   #fifthpg .form button:hover{
+    color: white;
+    background-color:rgb(255, 163, 5) ;
+    transition: .5s;
+   box-shadow: .2rem .2rem 1rem #FFA305;
+   }
+   
+   #fifthpg .info{
+    width: 30rem;
+    height: 27rem;
+    border: 2px solid rgb(255, 163, 5) ;
+    padding: 2rem 5rem;
+    margin: 5rem 5rem;
+    box-shadow: .2rem .2rem 1rem rgb(255, 163, 5);
+    
+   }
+   #fifthpg .info span{
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+   }
+   #fifthpg .info .info_links{
+    margin-top: 3rem ;
+    line-height: 3rem;
+   }
+   #fifthpg .info .info_links i{
+    color:rgb(255, 163, 5) ;
+    font-size: 1.5rem;
+  display: inline;
+ 
+   }
+   #fifthpg .info .info_links span{
+    display: inline;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+   }
+   #fifthpg .info .info_links p{
+    cursor: pointer;
+    display: inline;
+   }
+   #fifthpg .info .info_links p:hover{
+    color: rgb(255, 163, 5);
+   }
+   #fifthpg .info .info_links .social_links a{
+    text-decoration: none;
+   }
+   #fifthpg .info .info_links .social_links a i{
+    margin: 0rem .5rem;
+    font-size: 3rem;
+   }
+
+   /* Footer starts from here */
+
+   footer{
+    width: 100%;
+    height: 8rem;
+    background-color: rgb(255, 163, 5);
+    position: relative;
+    top: 12rem;
+    text-align: center;
+    font-size: 1rem;
+    color:#330708;
+   }
+   .footer_links{
+    margin-top: 1rem;
+   }
+   footer .footer_links a{
+    margin: 0rem .5rem;
+    font-size: 3rem;
+   }
+   .footer_links a i{
+    color:#330708 ;
+    font-size: 2.5rem;
+   }
+   .footer_links a i:hover{
+    color: white;
+   }
+
+/* Media Querries starts from here */
+
+
+
+@media (max-width:1285px){
+    #fifthpg .form{
+        margin: 5rem 15rem;
+    }
+    #fifthpg .info{
+        margin: 5rem 15rem;
+    }
+}
+
+@media(max-width:1100px) {
+    .secondpagehr {
+        position: relative;
+        top: 28rem;
+    }
+
+    .thirdpagehr {
+        position: relative;
+        top: 37rem;
+    }
+    .fourthpagehr{ 
+        top: 39rem;
+       }
+    
+
+    #thirdpg {
+        position: relative;
+        top: 28rem;
+        color: white;
+    }
+
+    #thirdpg .expertise {
+        font-size: 4rem;
+        font-weight: 800;
+
+    }
+
+    .elem span {
+        font-size: 3.5rem;
+        font-weight: 600;
+        padding: 0rem 4vw;
+    }
+
+    #fixed-image {
+        height: 27rem;
+        width: 22rem;
+        top: 20%;
+        right: 8%;
+    }
+    #fourthpg{
+        top: 38rem;
+    }
+    .fourthpagecontent {
+        font-size: 4rem;
+    }
+    #fifthpg{
+        top: 36rem;
+    }
+    #fifthpg .form{
+        width: 25rem;
+        height: 24rem;
+        margin: 5rem 15rem;
+       }
+       #fifthpg .form span{
+        font-size: 3rem;
+        font-weight: 700;
+       }
+       #fifthpg .form input{
+        width:25rem;
+        height: 2.5rem;
+       margin-top: 1rem;
+        font-size: 1.5rem;
+       }
+     
+       
+       #fifthpg .info{
+        width: 25rem;
+        height: 20rem;
+        margin: 5rem 15rem;
+       }
+
+       #fifthpg .info span{
+        color: white;
+        display: block;
+       }
+       #fifthpg .info .info_links{
+        margin-top: 2.5rem ;
+        line-height: 2.5rem;
+       }
+       #fifthpg .info .info_links i{
+        font-size: 1.3rem; 
+       }
+       #fifthpg .info .info_links span{
+        padding-left: 1rem;
+        font-size: 1.1rem;
+       }
+       footer{
+        top: 36rem;
+       }
+
+}
+
+@media(max-width:1010px) {
+    .navbar ul li {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .page1 h1 {
+        font-size: 5rem;
+    }
+
+    .para {
+        width: 80%;
+        bottom: 5rem;
+    }
+
+    .page1 h1 strong {
+        font-size: 6rem;
+    }
+
+    .page1 p {
+        font-size: 1.2rem;
+    }
+
+    .para a {
+        font-size: 1rem;
+    }
+
+    .wwd span {
+        font-size: 4rem;
+    }
+
+    #thirdpg .expertise {
+        font-size: 3.5rem;
+        font-weight: 700;
+
+    }
+
+    .elem span {
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 0rem 3vw;
+    }
+
+    #fixed-image {
+        height: 25rem;
+        width: 20rem;
+
+        top: 20%;
+        right: 6%;
+    }
+    .fourthpagecontent {
+        font-size: 3.6rem;
+    }
+    #fifthpg .form{
+        margin: 5rem 10rem;
+    }
+    #fifthpg .info{
+        margin: 5rem 10rem;
+    }
+}
+
+@media(max-width:800px) {
+    .navbar {
+        backdrop-filter: none;
+        background-color: #330708;
+
+    }
+
+    .navbar ul {
+        display: none;
+        background-color: #330708;
+        border-bottom-right-radius: 0rem;
+        border-top-right-radius: 0rem;
+        z-index: 99;
+
+    }
+
+    #openNav {
+        display: block;
+    }
+
+    #closeNav {
+        color: white;
+    }
+
+    .page1 h1 {
+        font-size: 3rem;
+    }
+
+    .para {
+        width: 90%;
+        bottom: 3rem;
+    }
+
+    .page1 h1 strong {
+        font-size: 5rem;
+    }
+
+    .page1 p {
+        font-size: 1rem;
+    }
+
+    .para a {
+        font-size: .8rem;
+    }
+
+    .wwd span {
+        font-size: 3rem;
+        /* bottom: 2rem; */
+    }
+
+    .wrapper {
+        top: 8rem;
+    }
+
+    #thirdpg .expertise {
+        font-size: 3rem;
+        font-weight: 600;
+
+    }
+
+    .elem span {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding: 0rem 2vw;
+    }
+
+    #fixed-image {
+        height: 23rem;
+        width: 18rem;
+
+        top: 20%;
+        right: 6%;
+    }
+    .fourthpagecontent {
+        font-size: 3rem;
+    }
+    #fifthpg .form{
+        margin: 5rem 5rem;
+    }
+    #fifthpg .info{
+        margin: 5rem 5rem;
+    }
+}
+
+@media (max-width:735px) {
+    #fixed-image {
+        height: 0rem;
+        width: 0rem;
+       
+    }
+    #thirdpg {
+        position: relative;
+        top: 55rem;
+        color: white;
+    }
+
+    .secondpagehr {
+        position: relative;
+        top: 55rem;
+    }
+
+    .thirdpagehr {
+        top: 63rem;
+    }
+    #fourthpg{
+        top: 65rem;
+    }
+    .fourthpagehr{ 
+        top: 66rem;
+       }
+       #fifthpg{
+        top: 64rem;
+    }
+    #fifthpg .form{
+        width: 22rem;
+        height: 23rem;
+        padding: 2rem 3rem;
+        margin: 5rem 5rem;
+       }
+       #fifthpg .form span{
+        font-size: 2.5rem;
+        font-weight: 600;
+       }
+       #fifthpg .form input{
+        width:19.5rem;
+        height: 2.3rem;
+       margin-top: 1rem;
+        font-size: 1.2rem;
+       }
+     
+    
+       #fifthpg .form textarea{
+        width: 90%;
+        height: 4rem;
+        margin-top:1rem ;
+        border-radius:1.5rem ;
+        padding: .1rem 1rem;
+        font-size: 1.2rem;
+        outline: none;
+       }
+       #fifthpg .info{
+        width: 22rem;
+        height: 20rem;
+        padding: 2rem 3rem;
+        margin: 2rem 5rem;
+       }
+
+       #fifthpg .info span{
+        color: white;
+        display: block;
+       }
+
+       #fifthpg .info .info_links{
+        margin-top: 2rem ;
+        line-height: 2.5rem;
+       }
+       #fifthpg .info .info_links i{
+        font-size: 1.2rem; 
+       }
+       #fifthpg .info .info_links span{
+        padding-left: 1rem;
+        font-size: 1rem;
+       }
+       footer{
+        top: 66rem;
+       }
+
+}
+@media(max-width:640px){
+    .fourthpageimg {
+        padding: 0rem 20vw;
+    }
+
+    #fifthpg .form{
+        width: 19rem;
+        height: 23rem;
+        padding: 2rem 2rem;
+        margin: 4rem 4rem;
+       }
+       #fifthpg .form span{
+        font-size: 2rem;
+        font-weight: 600;
+       }
+       #fifthpg .form input{
+        width:17rem;
+        height: 2rem;
+       margin-top: 1rem;
+        font-size: 1.1rem;
+       }
+     
+    
+       #fifthpg .form textarea{
+        width: 90%;
+        height: 3.5rem;
+        margin-top:1rem ;
+        border-radius:1.5rem ;
+        padding: .1rem 1rem;
+        font-size: 1.1rem;
+       }
+       #fifthpg .info{
+        width: 19rem;
+        height: 20rem;
+        padding: 2rem 2rem;
+        margin: 2rem 4rem;
+       }
+
+       #fifthpg .info .info_links{
+        margin-top: 2rem ;
+        line-height: 2rem;
+       }
+       #fifthpg .info .info_links i{
+        font-size: 1.2rem; 
+       }
+       #fifthpg .info .info_links span{
+        padding-left: 1rem;
+        font-size: 1rem;
+       }
+       #fifthpg .info .info_links .social_links a i{
+        margin: 0rem .5rem;
+        font-size: 2rem;
+       }
+
+}
+@media(max-width:520px) {
+    .page1 h1 {
+        font-size: 2rem;
+    }
+
+    .para {
+        width: 100%;
+        bottom: 1rem;
+    }
+
+    .page1 h1 strong {
+        font-size: 3.5rem;
+    }
+
+    .page1 p {
+        font-size: 1rem;
+    }
+
+    .para a {
+        font-size: .8rem;
+    }
+
+    .wwd span {
+        font-size: 3rem;
+        /* bottom: 1rem; */
+    }
+
+    .wrapper {
+        top: 6rem;
+    }
+
+    #thirdpg .expertise {
+        font-size: 2.5rem;
+        font-weight: 600;
+
+    }
+
+    .elem span {
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 0rem 2vw;
+    }
+
+   
+    .fourthpagecontent {
+        font-size: 2.5rem;
+    }
+    .fourthpageimg{
+        margin-top: 2rem;
+    }
+    #fifthpg .form{
+        width: 16rem;
+        height: 20rem;
+        padding: 1.5rem 1rem;
+        margin: 2.5rem 2.5rem;
+       }
+       #fifthpg .form span{
+        font-size: 2rem;
+        font-weight: 600;
+       }
+       #fifthpg .form input{
+        width:14rem;
+        height: 1.8rem;
+       margin-top: 1rem;
+        font-size: 1rem;
+       }
+     
+    
+       #fifthpg .form textarea{
+        width: 90%;
+        height: 3rem;
+        margin-top:1rem ;
+        border-radius:1.5rem ;
+        padding: .1rem 1rem;
+        font-size: 1rem;
+       }
+       #fifthpg .form button{
+        width: 6rem;
+        height: 2rem;
+        margin:1rem .5rem;
+        border-radius:1.5rem ;
+        font-size: 1rem;
+       }
+       #fifthpg .info{
+        width: 16rem;
+        height: 16rem;
+        padding: 1.5rem 1rem;
+        margin: 2rem 2.5rem;
+       }
+       #fifthpg .info span{
+        font-size: .9rem;
+       }
+
+       #fifthpg .info .info_links{
+        margin-top: 2rem ;
+        line-height: 2rem;
+       }
+       #fifthpg .info .info_links i{
+        font-size: 1rem; 
+       }
+       #fifthpg .info .info_links span{
+        padding-left: 1rem;
+        font-size: .7rem;
+       }
+}
+
+@media(max-width:380px) {
+    .page1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .para {
+        width: 100%;
+    }
+
+    .page1 h1 strong {
+        font-size: 2.5rem;
+    }
+
+    .page1 p {
+        font-size: .8rem;
+    }
+
+    .para a {
+        font-size: .8rem;
+    }
+
+    .wwd span {
+        font-size: 2rem;
+    }
+
+    .wrapper {
+        top: 5rem;
+    }
+
+    .box1 {
+        width: 290px;
+        height: 400px;
+
+    }
+
+    .box2 {
+        width: 290px;
+        height: 400px;
+    }
+
+    .box3 {
+        width: 290px;
+        height: 400px;
+    }
+
+    .text1 {
+        font-size: 1.5rem;
+    }
+
+    .text1 p {
+        margin-top: 15px;
+    }
+    .fourthpagecontent {
+        font-size: 2rem;
+    }
+    .fourthpageimg {
+        padding: 0rem 10vw;
+    }
+    .fourthpageimg img{
+       width: 12rem;
+       height: 12rem;
+    }
+    #fifthpg .form{
+        width: 13rem;
+        height: 18rem;
+        padding: 1rem .5rem;
+        margin: 2rem 4rem;
+       }
+       #fifthpg .form span{
+        font-size: 1.5rem;
+        font-weight: 600;
+       }
+       #fifthpg .form input{
+        width:11.5rem;
+        height: 1.5rem;
+       margin-top: 1rem;
+        font-size: .8rem;
+       }
+     
+    
+       #fifthpg .form textarea{
+        width: 90%;
+        height: 3rem;
+        margin-top:1rem ;
+        border-radius:1.5rem ;
+        padding: .1rem .5rem;
+        font-size: .8rem;
+       }
+       #fifthpg .info{
+        width: 13rem;
+        height: 14rem;
+        padding: 1rem .5rem;
+        margin: 0rem 4rem;
+       }
+       #fifthpg .info span{
+        font-size: .9rem;
+       }
+
+       #fifthpg .info .info_links{
+        margin-top: 1rem ;
+        line-height: 1.5rem;
+       }
+       #fifthpg .info .info_links i{
+        font-size: .8rem; 
+       }
+       #fifthpg .info .info_links span{
+        padding-left: .8rem;
+        font-size: .6rem;
+       }
+}
+
+@media(max-width:335px) {
+    .wwd{
+        height: 5rem;
+    }
+    .box1 {
+        width: 240px;
+        height: 350px;
+        margin-left: 5px;
+    }
+
+    .box2 {
+        width: 240px;
+        height: 350px;
+        margin-left: 5px;
+    }
+
+    .box3 {
+        width: 240px;
+        height: 350px;
+        margin-left: 5px;
+    }
+
+    .text1 {
+        font-size: 1.3rem;
+    }
+
+    .text1 p {
+        margin-top: 10px;
+    }
+    .fourthpagecontent {
+        font-size: 1.8rem;
+    }
+    #thirdpg {
+        position: relative;
+        top: 32rem;
+        color: white;
+    }
+
+    .secondpagehr {
+        position: relative;
+        top: 32rem;
+    }
+
+    .thirdpagehr {
+        top: 40rem;
+    }
+    #fourthpg{
+        top: 41rem;
+    }
+    .fourthpagehr{
+        top: 43rem;
+    }
+    #fifthpg{
+        top: 42rem;
+    }
+    #fifthpg .info{
+        width: 13rem;
+        height: 14rem;
+        padding: 1rem .5rem;
+        margin: 0rem 2rem;
+       }
+    #fifthpg .form{
+        
+        margin: 2rem 2rem;
+       }
+       #fifthpg .form button{
+        width: 5rem;
+        height: 1.8rem;
+        margin:1rem .5rem;
+        border-radius:1.5rem ;
+        font-size: .8rem;
+       }
+       footer{
+        top: 46rem;
+        font-size: 1rem;
+       }
+}
+
+@media(max-width:310px){
+    .thirdpagehr {
+        top: 43rem;
+    }
+    #fourthpg{
+        top: 44rem;
+    }
+    .fourthpagehr{
+        top: 45rem;
+    }
+    #fifthpg{
+        top: 45rem;
+    }
+}
